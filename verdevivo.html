@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NicAna Foundation - VerdeVivo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <a href="index.html" class="logo">NicAna <span class="tagline">Foundation</span></a>
+      </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-dropdown">
+            <a href="projetos.html" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+            <ul class="dropdown" role="menu">
+              <li><a href="projetos.html#esperanca">Projeto Esperança</a></li>
+              <li><a href="educamais.html">EducaMais</a></li>
+              <li><a href="verdevivo.html">VerdeVivo</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html" class="btn btn-ghost">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="color: var(--color-secondary);">Projeto VerdeVivo</h1>
+    <p class="lead" style="color: var(--color-neutral-base);">Promovemos a sustentabilidade e a conscientização ecológica, com foco na preservação de áreas verdes urbanas.</p>
+
+    <section class="grid grid-12" id="sobre-verdevivo">
+        <div class="col-8">
+            <h2 style="color: var(--color-secondary-dark);">O Que Fazemos</h2>
+            <div class="grid grid-12">
+                <div class="col-6">
+                    <p><strong>Mutirões de Limpeza:</strong> Organização de eventos regulares para coleta de lixo e descarte correto em rios e parques.</p>
+                </div>
+                <div class="col-6">
+                    <p><strong>Reflorestamento Urbano:</strong> Plantio de mudas nativas para aumentar a cobertura vegetal e melhorar a qualidade do ar.</p>
+                </div>
+            </div>
+            <div class="alert alert-warning">
+                <p><strong>Aviso:</strong> Próximo mutirão será sábado, dia 10/11. Precisamos de voluntários!</p>
+            </div>
+            <a href="cadastro.html" class="btn btn-secondary">Ver Calendário</a>
+        </div>
+        <div class="col-4">
+            <div class="card card-info" style="border-top: 5px solid var(--color-warning);">
+                <h3>Metas</h3>
+                <p>5000 mudas plantadas até o fim do ano.</p>
+                <span class="badge badge-warning">Sustentabilidade</span>
+            </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>NicAna Foundation © <span id="year"></span> — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <div id="toast-container" role="alert" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
