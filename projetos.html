@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NicAna Foundation - Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <a href="index.html" class="logo">NicAna <span class="tagline">Foundation</span></a>
+      </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-dropdown">
+            <a href="projetos.html" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+            <ul class="dropdown" role="menu">
+              <li><a href="projetos.html#esperanca">Projeto Esperança</a></li>
+              <li><a href="educamais.html">EducaMais</a></li>
+              <li><a href="verdevivo.html">VerdeVivo</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html" class="btn btn-ghost">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Nossos Projetos de Impacto Social</h1>
+
+    <section class="grid grid-12 card-list">
+      
+      <article id="esperanca" class="col-4 card card-project">
+        <h2 class="card-title" style="color: var(--color-primary);">Projeto Esperança</h2>
+        <span class="badge badge-success">Apoio Comunitário</span>
+        <p>Iniciativa focada em fornecer refeições e apoio a comunidades carentes. Nosso objetivo é garantir a segurança alimentar.</p>
+        <p class="text-right"><a href="projetos.html#esperanca-detalhe" class="btn btn-secondary">Detalhes</a></p>
+      </article>
+
+      <article id="educamais" class="col-4 card card-project">
+        <h2 class="card-title" style="color: var(--color-primary);">EducaMais</h2>
+        <span class="badge badge-primary">Educação</span>
+        <p>Oferece aulas de reforço e oficinas profissionalizantes para jovens, visando a inclusão digital e o futuro profissional.</p>
+        <p class="text-right"><a href="educamais.html" class="btn btn-secondary">Detalhes</a></p>
+      </article>
+
+      <article id="verdevivo" class="col-4 card card-project">
+        <h2 class="card-title" style="color: var(--color-primary);">VerdeVivo</h2>
+        <span class="badge badge-warning">Meio Ambiente</span>
+        <p>Promove a conscientização ambiental, com ações de reflorestamento e mutirões de limpeza em parques e áreas verdes.</p>
+        <p class="text-right"><a href="verdevivo.html" class="btn btn-secondary">Detalhes</a></p>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>NicAna Foundation © <span id="year"></span> — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <div id="toast-container" role="alert" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
