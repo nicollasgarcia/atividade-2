@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NicAna Foundation - Cadastro</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <a href="index.html" class="logo">NicAna <span class="tagline">Foundation</span></a>
+      </div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-dropdown">
+            <a href="projetos.html" aria-haspopup="true" aria-expanded="false">Projetos ▾</a>
+            <ul class="dropdown" role="menu">
+              <li><a href="projetos.html#esperanca">Projeto Esperança</a></li>
+              <li><a href="projetos.html#educamais">EducaMais</a></li>
+              <li><a href="projetos.html#verdevivo">VerdeVivo</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html" class="btn btn-ghost">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="text-center">Cadastro de Voluntários</h1>
+    <section class="grid grid-12">
+      <div class="col-8 col-start-3">
+        <form id="cadastro-form" class="form-style" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" required data-validation-message="O nome completo é obrigatório.">
+            <div class="feedback" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required data-validation-message="Por favor, insira um e-mail válido.">
+            <div class="feedback" aria-live="polite"></div>
+          </div>
+          <div class="form-group">
+            <label for="area">Área de Interesse</label>
+            <select id="area" required data-validation-message="Selecione uma área de interesse.">
+              <option value="">Selecione...</option>
+              <option value="educacao">Educação</option>
+              <option value="meioambiente">Meio Ambiente</option>
+              <option value="apoio">Apoio Comunitário</option>
+            </select>
+            <div class="feedback" aria-live="polite"></div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">Enviar Cadastro</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>NicAna Foundation © <span id="year"></span> — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <div id="toast-container" role="alert" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
